@@ -80,7 +80,6 @@
     <Content Include="js\jquery.js" />
     <Content Include="images\logo.png" />
     <Content Include="KayitOl.aspx" />
-    <Content Include="KayitOla.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,13 +103,6 @@
     </Compile>
     <Compile Include="KayitOl.aspx.designer.cs">
       <DependentUpon>KayitOl.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="KayitOla.aspx.cs">
-      <DependentUpon>KayitOla.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="KayitOla.aspx.designer.cs">
-      <DependentUpon>KayitOla.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
