@@ -48,10 +48,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav pull-right" >
                         <li >
-                            <a href="#" style="color:#f7f7f7">Kaydol</a>
+                            <a href="KayitOl.aspx" style="color:#f7f7f7">Kaydol</a>
                         </li>
                         <li >
-                            <a href="#" style="color:#f7f7f7">Giriş</a>
+                            <a href="KayitOl.aspx" style="color:#f7f7f7">Giriş</a>
                         </li> 
                     </ul>
                 </div> 

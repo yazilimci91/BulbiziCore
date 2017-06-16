@@ -26,8 +26,8 @@
     <![endif]-->
 
 </head>
-<body style="background-color:#efefef">
-    <form id="form1" runat="server"> 
+<body style="background-color: #efefef">
+    <form id="form1" runat="server">
         <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: white; padding-top: 30px; padding-bottom: 30px;">
             <div class="container">
                 <div class=" navbar-collapse">
@@ -40,18 +40,21 @@
             <!-- /.container -->
         </nav>
 
-        <div class="container" style="border:1px #000000 solid; background-color:white;margin-top:90px; padding:20px">
-            <div class="row">
-                <p class="text-left"> 
-                    <h2 style="color: #1562a3; font-weight: 600;" > <asp:Label ID="lblBaslik" runat="server" Text="Label"></asp:Label>
-                         </h2>
-                   
+       
+        <div class="col-xs-4" style="border: 1px #000000 solid; background-color: white; padding: 20px">
+            <div class="col-xs-12">
+                <p class="text-left">
+                    <h2 style="color: #1562a3; font-weight: 600;">
+                        <asp:Label ID="lblBaslik" runat="server" Text="Label"></asp:Label>
+                    </h2>
                 </p>
             </div>
         </div>
-         
-        <div class="container" style="border:1px #000000 solid; background-color:white;padding:20px">
-            <div class="row">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+        <div class="col-xs-4" style="border: 1px #000000 solid; background-color: white; padding: 20px">
+            <div class="col-xs-12">
                 <p class="text-left">
                     <asp:RadioButton ID="rdGirisYap" runat="server" Text="Giriş Yap" GroupName="a" AutoPostBack="True" OnCheckedChanged="rdGirisYap_CheckedChanged" />
                 </p>
@@ -61,100 +64,98 @@
             </div>
         </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-
-
-
-        <asp:Panel ID="PanelUyeOl" runat="server" Visible="false" >
+        <div class="container">
+            <div class="row"></div>
+        </div>
+        <asp:Panel ID="PanelUyeOl" runat="server" Visible="false">
             <asp:UpdatePanel ID="UpdatePanelUyeOl" runat="server">
                 <ContentTemplate>
 
-                    <div class="container"   style="border:1px #000000 solid; background-color:white; padding:20px">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">
-                                        Ad-Soyad
+                    <%--   <div class="container" style="border: 1px #000000 solid; background-color: white; padding: 20px">
+                        <div class="row">--%>
+                    <div class="col-xs-4" style="border: 1px #000000 solid; background-color: white; padding: 20px">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">
+                                    Ad-Soyad
                             <span runat="server" visible="true" style="color: red" id="spanAdSoyad">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="txtAdSoyad"></asp:RequiredFieldValidator>
                             </span>
-                                    </label>
-                                    <asp:TextBox ID="txtAdSoyad" CssClass="form-control" runat="server" placeholder="Ad-Soyad" OnTextChanged="txtAdSoyad_TextChanged"></asp:TextBox>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        Email
+                                </label>
+                                <asp:TextBox ID="txtAdSoyad" CssClass="form-control" runat="server" placeholder="Ad-Soyad" OnTextChanged="txtAdSoyad_TextChanged"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    Email
                             <span runat="server" visible="true" style="color: red" id="spanEmail">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="txtEmail"></asp:RequiredFieldValidator>
                             </span>
-                                    </label>
-                                    <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        Şifre
+                                </label>
+                                <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    Şifre
                             <span runat="server" visible="true" style="color: red" id="spansifre">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="txtSifre"></asp:RequiredFieldValidator>
                             </span>
-                                    </label>
-                                    <asp:TextBox ID="txtSifre" CssClass="form-control" runat="server" placeholder="Şifre" TextMode="Password"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        İl
+                                </label>
+                                <asp:TextBox ID="txtSifre" CssClass="form-control" runat="server" placeholder="Şifre" TextMode="Password"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    İl
                             <span runat="server" visible="true" style="color: red" id="spanIl">*
                             </span>
-                                    </label>
-                                    <asp:DropDownList ID="ddIl" CssClass="form-control" runat="server"></asp:DropDownList>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        İlçe
+                                </label>
+                                <asp:DropDownList ID="ddIl" CssClass="form-control" runat="server"></asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    İlçe
                             <span runat="server" visible="true" style="color: red" id="spanIlce">*
                             </span>
-                                    </label>
-                                    <asp:DropDownList ID="ddIlce" CssClass="form-control" runat="server"></asp:DropDownList>
-                                </div>
-                                <asp:Button ID="btnKaydol" CssClass="btn btn-primary" runat="server" Text="Kaydol" />
+                                </label>
+                                <asp:DropDownList ID="ddIlce" CssClass="form-control" runat="server"></asp:DropDownList>
                             </div>
+                            <asp:Button ID="btnKaydol" CssClass="btn btn-primary" runat="server" Text="Kaydol" />
                         </div>
                     </div>
-
-
+                    <%--   </div>
+                    </div>--%>
                 </ContentTemplate>
                 <Triggers>
                     <asp:AsyncPostBackTrigger ControlID="btnKaydol" EventName="Click" />
                 </Triggers>
-
             </asp:UpdatePanel>
         </asp:Panel>
-
-        <asp:Panel ID="PanelGirisYap" runat="server"  >
+        <div class="container">
+            <div class="row"></div>
+        </div>
+        <asp:Panel ID="PanelGirisYap" runat="server">
             <asp:UpdatePanel ID="UpdatePanelGirisYap" runat="server">
-                <ContentTemplate> 
-                    <div class="container" style="border:1px #000000 solid; background-color:white;padding:20px; ">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        Email
+                <ContentTemplate>
+                    <div class="col-xs-4" style="border: 1px #000000 solid; background-color: white; padding: 20px">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    Email
                             <span runat="server" visible="true" style="color: red" id="span2">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ControlToValidate="txtEmailGiris"></asp:RequiredFieldValidator>
                             </span>
-                                    </label>
-                                    <asp:TextBox ID="txtEmailGiris" CssClass="form-control" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">
-                                        Şifre
+                                </label>
+                                <asp:TextBox ID="txtEmailGiris" CssClass="form-control" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">
+                                    Şifre
                             <span runat="server" visible="true" style="color: red" id="span3">
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ControlToValidate="txtSifreGiris"></asp:RequiredFieldValidator>
                             </span>
-                                    </label>
-                                    <asp:TextBox ID="txtSifreGiris" CssClass="form-control" runat="server" placeholder="Şifre" TextMode="Password"></asp:TextBox>
-                                </div>
-                                <asp:Button ID="btnGiris" CssClass="btn btn-primary" runat="server" Text="Giriş Yap" />
+                                </label>
+                                <asp:TextBox ID="txtSifreGiris" CssClass="form-control" runat="server" placeholder="Şifre" TextMode="Password"></asp:TextBox>
                             </div>
+                            <asp:Button ID="btnGiris" CssClass="btn btn-primary" runat="server" Text="Giriş Yap" />
                         </div>
                     </div>
 
@@ -164,7 +165,9 @@
                 </Triggers>
             </asp:UpdatePanel>
         </asp:Panel>
-
+        <div class="container">
+            <div class="row"></div>
+        </div>
         <footer class="panel-footer">
             <div class="container">
                 <div class="row">
